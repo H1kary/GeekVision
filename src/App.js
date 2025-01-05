@@ -1,4 +1,3 @@
-import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import AboutUs from './components/AboutUs/AboutUs';
 import Advantages from './components/Advantages/Advantages';
@@ -12,7 +11,6 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Main />
       <AboutUs />
       <Advantages />
