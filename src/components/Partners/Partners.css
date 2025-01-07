@@ -1,0 +1,44 @@
+.partners {
+    margin-top: 145px;
+    overflow: hidden;
+}
+
+.partners-track {
+    max-width: 1310px;
+    margin: 0 auto;
+    position: relative;
+    height: 77px;
+    display: flex;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+.partners-content {
+    display: flex;
+    align-items: center;
+    gap: 240px;
+    padding: 0 120px;
+    animation: scroll 20s linear infinite;
+}
+
+.partners-content img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.partners-track:hover .partners-content {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

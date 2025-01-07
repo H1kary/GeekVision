@@ -1,0 +1,99 @@
+.advantages {
+    margin-top: 130px;
+}
+
+.advantages-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1310px;
+    margin: 0 auto;
+}
+
+.advantages-container h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #232323;
+}
+
+.advantages-slider {
+    margin-top: 59px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.advantages-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.advantages-slider-item {
+    position: relative;
+    overflow: hidden;
+    min-width: 295px;
+    max-width: 295px;
+    min-height: 439px;
+    max-height: 439px;
+    background: #ffffff;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.advantages-slider-item p:first-of-type {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #232323;
+    font-family: 'Onest';
+}
+
+.advantages-slider-item h3 {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    font-size: 29px;
+    font-weight: 600;
+    color: #373737;
+}
+
+.advantages-slider-item p:last-of-type {
+    position: absolute;
+    top: 292px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(55, 55, 55, 0.7);
+}
+
+.advantages-slider-item img {
+    opacity: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.advantages-slider-item:hover {
+    background: #232323;
+}
+
+.advantages-slider-item:hover p:first-of-type {
+    color: #ffffff;
+}
+
+.advantages-slider-item:hover h3 {
+    color: #ffffff;
+}
+
+.advantages-slider-item:hover p:last-of-type {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.advantages-slider-item:hover img {
+    opacity: 1;
+}
