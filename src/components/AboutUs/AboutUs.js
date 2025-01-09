@@ -4,7 +4,7 @@ import aboutUsButton from '../../assets/images/aboutusbutton.svg';
 
 function AboutUs() {
   return (
-    <section className="about-us">
+    <section className="about-us" id="about-us">
       <div className="about-us-container">
         <div className="about-us-head">
           <div>

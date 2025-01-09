@@ -5,7 +5,7 @@ import partners3 from '../../assets/images/partners3.png';
 
 function Partners() {
   return (
-    <section className="partners">
+    <section className="partners" id="partners">
       <div className="partners-track">
         <div className="partners-content">
           <img src={partners1} alt="" />

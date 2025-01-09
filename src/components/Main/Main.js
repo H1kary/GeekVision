@@ -5,7 +5,7 @@ import mainbutton from '../../assets/images/mainbutton.svg';
 
 function Main() {
     return (
-        <main>
+        <main id="main">
             <Header />
             <h1>Geek Vision</h1>
             <p>

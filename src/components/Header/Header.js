@@ -2,12 +2,12 @@ import './Header.css';
 
 function Header() {
     return (
-        <header>
+        <header id="header">
             <nav>
-                <a href="/">О нас</a>
-                <a href="/">Преимущества</a>
-                <a href="/">Кейсы</a>
-                <a href="/">Контакты</a>
+                <a href="#about-us">О нас</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#cases">Кейсы</a>
+                <a href="#contacts">Контакты</a>
             </nav>
         </header>
     );

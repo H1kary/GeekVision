@@ -4,6 +4,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Onest';
   src: url(./assets/fonts/Onest-VariableFont_wght.ttf) format('truetype');
@@ -19,6 +20,7 @@
   -ms-overflow-style: none;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 body {

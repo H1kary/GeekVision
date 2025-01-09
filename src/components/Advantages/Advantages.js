@@ -1,12 +1,25 @@
 import './Advantages.css';
 import advatagesSvg from '../../assets/images/advatagessvg.svg';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 function Advantages() {
   const sliderRef = useRef(null);
   let isDown = false;
   let startX;
   let scrollLeft;
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const preventScroll = (e) => {
+      e.preventDefault();
+    };
+
+    slider.addEventListener('wheel', preventScroll, { passive: false });
+    
+    return () => {
+      slider.removeEventListener('wheel', preventScroll);
+    };
+  }, []);
 
   const handleMouseDown = (e) => {
     isDown = true;
@@ -42,7 +55,7 @@ function Advantages() {
   };
 
   return (
-    <section className="advantages">
+    <section className="advantages" id="advantages">
       <div className="advantages-container">
         <h2>Наши преимущества</h2>
         <div
