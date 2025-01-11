@@ -43,9 +43,21 @@
     position: relative;
     overflow: hidden;
     min-height: 439px;
-    background: #ffffff;
+    background-color: #ffffff;
     border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+}
+
+.advantages-slider-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #232323;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
 }
 
 .advantages-slider-item p:first-of-type {
@@ -56,7 +68,8 @@
     font-weight: 500;
     color: #232323;
     font-family: 'Onest';
-    transition: all 0.3s ease-in-out;
+    transition: color 0.5s ease;
+    z-index: 1;
 }
 
 .advantages-slider-item h3 {
@@ -66,7 +79,8 @@
     font-size: 29px;
     font-weight: 600;
     color: #373737;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.5s ease;
+    z-index: 1;
 }
 
 .advantages-slider-item p:last-of-type {
@@ -76,18 +90,21 @@
     font-size: 18px;
     font-weight: 400;
     color: rgba(55, 55, 55, 0.7);
-    transition: all 0.3s ease-in-out;
+    transition: color 0.5s ease;
+    z-index: 1;
 }
 
 .advantages-slider-item img {
     opacity: 0;
     user-select: none;
     -webkit-user-drag: none;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.5s ease;
+    position: relative;
+    z-index: 1;
 }
 
-.advantages-slider-item:hover {
-    background: #232323;
+.advantages-slider-item:hover::before {
+    opacity: 1;
 }
 
 .advantages-slider-item:hover p:first-of-type {

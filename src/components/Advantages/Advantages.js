@@ -16,7 +16,12 @@ function Advantages() {
             spaceBetween={30}
             slidesPerView="auto"
             grabCursor={true}
-            freeMode={true}
+            freeMode={{
+              enabled: true,
+              momentumBounce: false,
+            }}
+            watchSlidesProgress={true}
+            preventInteractionOnTransition={true}
             className="advantages-slider"
           >
             <SwiperSlide className="advantages-slider-item">
