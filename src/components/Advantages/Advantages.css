@@ -45,7 +45,7 @@
     min-height: 439px;
     background: #ffffff;
     border-radius: 20px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .advantages-slider-item p:first-of-type {
@@ -56,7 +56,7 @@
     font-weight: 500;
     color: #232323;
     font-family: 'Onest';
-    transition: color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .advantages-slider-item h3 {
@@ -66,7 +66,7 @@
     font-size: 29px;
     font-weight: 600;
     color: #373737;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .advantages-slider-item p:last-of-type {
@@ -76,14 +76,14 @@
     font-size: 18px;
     font-weight: 400;
     color: rgba(55, 55, 55, 0.7);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .advantages-slider-item img {
     opacity: 0;
     user-select: none;
     -webkit-user-drag: none;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .advantages-slider-item:hover {
