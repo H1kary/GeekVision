@@ -88,3 +88,69 @@ form button img {
 input:invalid {
     border: 1px solid red;
 }
+
+.form-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-popup {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  position: relative;
+  max-width: 95%;
+  width: 900px;
+  animation: popup 0.3s ease-out;
+}
+
+.form-popup .form-container-inner {
+  min-width: auto;
+  max-width: 100%;
+  min-height: auto;
+  max-height: none;
+}
+
+.form-popup h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.form-popup form {
+  margin-top: 40px;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.form-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #333;
+}
+
+.form-popup-close:hover {
+  color: #000;
+}

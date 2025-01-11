@@ -11,7 +11,7 @@ function Contacts() {
         </div>
         <div className="contacts-container-right">
           <p>Электронная почта</p>
-          <a href="mailto:scaleco@gmail.com">scaleco@gmail.com</a>
+          <a href="mailto:info@geekvision.ru">info@geekvision.ru</a>
           <img src={contactsSvg} alt="" />
         </div>
       </div>

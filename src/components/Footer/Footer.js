@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <div className="footer-right">
           <p>Электронная почта</p>
-          <a href="mailto:scaleco@gmail.com">scaleco@gmail.com</a>
+          <a href="mailto:info@geekvision.ru">info@geekvision.ru</a>
         </div>
       </div>
     </footer>
