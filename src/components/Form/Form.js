@@ -4,6 +4,9 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+
 
 function Form() {
   const [phone, setPhone] = useState('');
@@ -73,6 +76,20 @@ function Form() {
         }
       );
   };
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'bottom',
+      distance: '200px',
+      duration: 1500,
+      delay: 0,
+      opacity: 0,
+      mobile: true,
+    });
+    sr.reveal('.form-container', {
+      origin: 'bottom',
+    });
+  }, []);
 
   return (
     <section className="form" id="form">

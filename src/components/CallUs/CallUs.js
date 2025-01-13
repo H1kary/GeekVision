@@ -2,6 +2,8 @@ import './CallUs.css';
 import callUsSvg from '../../assets/images/callus.svg';
 import { useState } from 'react';
 import Form from '../FormPopup/Form';
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
 
 function CallUs() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -10,6 +12,20 @@ function CallUs() {
     e.preventDefault();
     setIsFormOpen(true);
   };
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'bottom',
+      distance: '200px',
+      duration: 1500,
+      delay: 0,
+      opacity: 0,
+      mobile: true,
+  });
+  sr.reveal('.call-us-container', {
+    origin: 'bottom',
+  });
+  }, []);
 
   return (
     <>

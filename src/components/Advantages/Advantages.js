@@ -2,7 +2,6 @@ import './Advantages.css';
 import advatagesSvg from '../../assets/images/advatagessvg.svg';
 import { Swiper } from 'swiper';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
