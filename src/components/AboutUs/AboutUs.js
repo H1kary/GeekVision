@@ -1,8 +1,12 @@
 import './AboutUs.css';
 import aboutUsSvg from '../../assets/images/aboutus.svg';
+// import aboutUsPng from '../../assets/images/aboutus.png';
+import whiteFade from '../../assets/images/whitefade.png';
 import aboutUsButton from '../../assets/images/aboutusbutton.svg';
 import { useState } from 'react';
 import Form from '../FormPopup/Form';
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
 
 function AboutUs() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -11,6 +15,36 @@ function AboutUs() {
     e.preventDefault();
     setIsFormOpen(true);
   };
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'bottom',
+      distance: '200px',
+      duration: 1500,
+      delay: 0,
+      opacity: 0,
+      mobile: true,
+  });
+
+    sr.reveal('.about-us-head div:first-of-type h1', { 
+        origin: 'left',
+    });
+    sr.reveal('.about-us-head div:first-of-type p', {
+        origin: 'left',
+    });
+
+    sr.reveal('.about-us-head div:last-of-type', {
+        origin: 'right',
+    });
+    sr.reveal('.about-us-container > a', {
+        origin: 'bottom',
+    });
+    sr.reveal('.about-us-container > img', {
+        origin: 'bottom',
+        delay: 300,
+    });
+
+}, []);
 
   return (
     <>
@@ -36,6 +70,8 @@ function AboutUs() {
           <img src={aboutUsSvg} alt="" />
         </div>
       </section>
+      <img className='whitefade' src={whiteFade} alt="" />
+      {/* <img className='about-us-image' src={aboutUsPng} alt="" /> */}
       {isFormOpen && <Form onClose={() => setIsFormOpen(false)} />}
     </>
   );

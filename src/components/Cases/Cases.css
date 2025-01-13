@@ -30,9 +30,9 @@
     padding: 20px 0;
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
     padding-left: calc((100vw - 1310px) / 2 + 30px);
-}
+} */
 
 .cases-slider .swiper-slide {
     width: 780px !important;

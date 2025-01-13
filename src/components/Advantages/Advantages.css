@@ -1,17 +1,12 @@
 .advantages {
     margin-top: 130px;
-    overflow: hidden;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .advantages-container {
     position: relative;
-    z-index: 10;
     max-width: 1310px;
     margin: 0 auto;
+    z-index: 999;
 }
 
 .advantages-container h2 {
@@ -21,30 +16,18 @@
     margin-bottom: 59px;
 }
 
-.advantages-slider-container {
-    width: 100vw;
-    margin-left: calc((1310px - 100vw) / 2);
-}
-
-.advantages-slider {
-    padding: 20px 0;
-}
-
-.swiper-wrapper {
-    padding-left: calc((100vw - 1310px) / 2 + 30px);
-}
-
-.advantages-slider .swiper-slide {
-    width: 295px !important;
-    margin-right: 30px;
-}
-
 .advantages-slider-item {
     position: relative;
     overflow: hidden;
     min-height: 439px;
+    max-height: 439px;
+    min-width: 295px;
+    max-width: 295px;
     background-color: #ffffff;
     border-radius: 20px;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: grab;
 }
 
 .advantages-slider-item::before {
@@ -69,7 +52,7 @@
     color: #232323;
     font-family: 'Onest';
     transition: color 0.5s ease;
-    z-index: 1;
+    z-index: 999;
 }
 
 .advantages-slider-item h3 {
@@ -80,7 +63,7 @@
     font-weight: 600;
     color: #373737;
     transition: color 0.5s ease;
-    z-index: 1;
+    z-index: 999;
 }
 
 .advantages-slider-item p:last-of-type {
@@ -91,7 +74,7 @@
     font-weight: 400;
     color: rgba(55, 55, 55, 0.7);
     transition: color 0.5s ease;
-    z-index: 1;
+    z-index: 999;
 }
 
 .advantages-slider-item img {
@@ -121,8 +104,4 @@
 
 .advantages-slider-item:hover img {
     opacity: 1;
-}
-
-.hidden-slide {
-    opacity: 0;
 }

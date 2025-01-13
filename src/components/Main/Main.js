@@ -2,8 +2,9 @@ import './Main.css';
 import Header from '../Header/Header';
 import mainsvg from '../../assets/images/main.svg';
 import mainbutton from '../../assets/images/mainbutton.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Form from '../FormPopup/Form';
+import ScrollReveal from 'scrollreveal';
 
 function Main() {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -12,6 +13,40 @@ function Main() {
         e.preventDefault();
         setIsFormOpen(true);
     };
+
+    useEffect(() => {
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '200px',
+            duration: 1500,
+            delay: 0,
+            opacity: 0,
+            mobile: true,
+        });
+        sr.reveal('#main h1', {
+            origin: 'left',
+        });
+        sr.reveal('#main p', {
+            origin: 'left',
+            delay: 100,
+        });
+        sr.reveal('#main > a', {
+            origin: 'left',
+            delay: 150,
+        });
+        ScrollReveal().reveal('#main img', {
+            distance: '0px',
+            opacity: 0,
+            scale: 0.5,
+            rotate: {
+                x: 20,
+                y: 20,
+                z: 10,
+            },
+        });
+
+        return () => sr.destroy();
+    }, []);
 
     return (
         <>

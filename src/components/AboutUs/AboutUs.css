@@ -58,10 +58,24 @@
 }
 .about-us-container>img{
     position: absolute;
-    /* top: 429px; */
     top: 280px;
-    left: -303px;
-    width: 1844.01px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 665px;
+}
+ /* .about-us-image{
+    position: absolute;
+    top: 1364px;
+    left: calc(50%-50vw);
+    width: 100vw;
+    height: 665px;
+ } */
+.whitefade{
+    position: absolute;
+    top: 1364px;
+    left: calc(50%-50vw);
+    width: 100vw;
     height: 665px;
 }
 .about-us-container>a{
