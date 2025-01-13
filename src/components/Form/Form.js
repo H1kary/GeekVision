@@ -14,6 +14,7 @@ function Form() {
   const [name, setName] = useState('');
   const [task, setTask] = useState('');
   const [email, setEmail] = useState('');
+  const [isAgreed, setIsAgreed] = useState(false);
 
   const formatPhoneNumber = (value) => {
     const cleaned = value.replace(/\D/g, '');
@@ -146,7 +147,18 @@ function Form() {
                 onInput={handlePhoneInput} // Используем onInput для автоформатирования
               />
             </div>
-            <button type="submit">
+            <div className="checkbox-container">
+              <input
+                type="checkbox"
+                id="agreement"
+                checked={isAgreed}
+                onChange={(e) => setIsAgreed(e.target.checked)}
+              />
+              <label htmlFor="agreement">
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
+            <button type="submit" disabled={!isAgreed}>
               Оставить заявку
               <img src={formButton} alt="" />
             </button>

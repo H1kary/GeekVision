@@ -168,3 +168,31 @@ input:invalid {
   transform: translateY(-20px);
   transition: transform 0.3s ease;
 }
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  color: #232323;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button[type="submit"]:disabled img {
+  opacity: 0.5;
+}
