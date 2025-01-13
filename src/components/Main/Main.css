@@ -16,6 +16,7 @@ main>img {
     width: 100%;
     height: 100%;
     z-index: 1;
+    animation: mainBgRotate 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 main>h1 {
@@ -52,4 +53,22 @@ main>a {
     font-weight: 400;
     color: #232323;
     border-radius: 100px;
+}
+main>a:hover img{
+    transform: translateX(-10px);
+}
+
+@keyframes mainBgRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(1deg);
+    }
+    66% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }

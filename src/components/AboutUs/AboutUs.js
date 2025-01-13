@@ -67,7 +67,7 @@ function AboutUs() {
             Обсудить проект
             <img src={aboutUsButton} alt="" />
           </a>
-          <img src={aboutUsSvg} alt="" />
+          <img className='about-us-bg' src={aboutUsSvg} alt="" />
         </div>
       </section>
       <img className='whitefade' src={whiteFade} alt="" />

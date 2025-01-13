@@ -56,7 +56,7 @@ function Main() {
                 <p>
                     Обработка фото и видео изображений с помощью <br />технологий искусственного интеллекта.
                 </p>
-                <a href="/" onClick={handleOpenForm}>Обсудить проект <img src={mainbutton} alt="mainbutton" /></a>
+                <a href="/" onClick={handleOpenForm}>Обсудить проект <img className='main-button-img' src={mainbutton} alt="" /></a>
                 <img src={mainsvg} alt="main" />
             </main>
             {isFormOpen && <Form onClose={() => setIsFormOpen(false)} />}
