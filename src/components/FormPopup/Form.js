@@ -1,7 +1,7 @@
 import './Form.css';
 import formButton from '../../assets/images/formbutton.png';
 import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 
@@ -92,7 +92,7 @@ function FormPopup({ onClose }) {
 
   return (
     <div className={`form-popup-overlay ${isClosing ? 'closing' : ''}`} onClick={handleOverlayClick}>
-      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
+      
       <div className={`form-popup ${isClosing ? 'closing' : ''}`}>
         <button className="form-popup-close" onClick={handleCloseClick}>&times;</button>
         <div className="form-container-inner">

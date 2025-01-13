@@ -1,7 +1,7 @@
 import './Form.css';
 import formButton from '../../assets/images/formbutton.png';
 import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 
@@ -76,7 +76,7 @@ function Form() {
 
   return (
     <section className="form" id="form">
-      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
+      
       <div className="form-container">
         <div className="form-container-inner">
           <h2>Остались вопросы?</h2>

@@ -7,10 +7,13 @@ import Cases from './components/Cases/Cases';
 import Contacts from './components/Contacts/Contacts';
 import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
       <Main />
       <AboutUs />
       <Advantages />
