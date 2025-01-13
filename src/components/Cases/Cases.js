@@ -1,17 +1,47 @@
 import './Cases.css';
-// import case1 from '../../assets/images/case1.png';
-// import case2 from '../../assets/images/case2.png';
-// import case3 from '../../assets/images/case3.png';
 import cases1 from '../../assets/images/cases1.png';
 import cases2 from '../../assets/images/cases2.png';
 import cases3 from '../../assets/images/cases3.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel, Navigation } from 'swiper/modules';
 import 'swiper/css';
-import { Swiper } from 'swiper';
-import 'swiper/css';
-import { useEffect } from 'react';
+import 'swiper/css/navigation';
+import { useEffect, useState } from 'react';
 import ScrollReveal from 'scrollreveal';
 
 function Cases() {
+  const [activeCard, setActiveCard] = useState(null);
+
+  const handleClick = (index) => {
+    setActiveCard(activeCard === index ? null : index);
+  };
+
+  const cardContent = [
+    {
+      title: "ПРОМЫШЛЕННОСТЬ",
+      description: "Анализ загруженности и фиксация реальных трудозатрат.",
+      image: cases1,
+      backContent: "Здесь подробное описание первого кейса. Можно добавить любой текст или контент."
+    },
+    {
+      title: "ПРОМЫШЛЕННОСТЬ",
+      description: "Дефектоскопия на объектах с высоким темпом производства.",
+      image: cases2,
+      backContent: "Здесь подробное описание второго кейса. Можно добавить любой текст или контент."
+    },
+    {
+      title: "ПРОМЫШЛЕННОСТЬ",
+      description: "Контроль внимания на рабочем месте и обеспечение безопасности во время движения или работы.",
+      image: cases3,
+      backContent: "Здесь подробное описание третьего кейса. Можно добавить любой текст или контент."
+    },
+    {
+      title: "ПРОМЫШЛЕННОСТЬ",
+      description: "Контроль внимания на рабочем месте и обеспечение безопасности во время движения или работы.",
+      image: cases3,
+      backContent: "Здесь подробное описание третьего кейса. Можно добавить любой текст или контент."
+    }
+  ];
 
   useEffect(() => {
     const sr = ScrollReveal({
@@ -35,47 +65,36 @@ function Cases() {
     });
   }, []);
 
-  useEffect(() => {
-
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      slidesPerView: 3,
-      draggable: true,
-      spaceBetween: 25,
-      loop: true,
-    });
-    // return () => {
-    //   if (swiper) swiper.destroy();
-    // };
-  }, []);
-
-
   return (
     <section className="cases" id="cases">
       <div className="cases-container">
         <h2>Кейсы</h2>
-        <div className="swiper cases-swiper">
-          <div className="swiper-wrapper cases-swiper-wrapper">
-            <div className="swiper-slide cases-slider-item">
-              <p>ПРОМЫШЛЕННОСТЬ</p>
-              <h3>Анализ загруженности и фиксация <br/>реальных трудозатрат.</h3>
-              <img src={cases1} alt="" />
-              <button>Подробнее</button>
-            </div>
-            <div className="swiper-slide cases-slider-item">
-              <p>ПРОМЫШЛЕННОСТЬ</p>
-              <h3>Дефектоскопия на объектах с высоким <br/>темпом производства.</h3>
-              <img src={cases2} alt="" />
-              <button>Подробнее</button>
-            </div>
-            <div className="swiper-slide cases-slider-item">
-              <p>ПРОМЫШЛЕННОСТЬ</p>
-              <h3>Контроль внимания на рабочем месте и <br/>обеспечение безопасности во время <br/>движения или работы.</h3>
-              <img src={cases3} alt="" />
-              <button>Подробнее</button>
-            </div>
-          </div>
-        </div>
+        <Swiper
+          modules={[Navigation, Mousewheel]}
+          spaceBetween={25}
+          slidesPerView={3}
+          mousewheel={true}
+          loop={true}
+          className="cases-swiper"
+        >
+          {cardContent.map((card, index) => (
+            <SwiperSlide key={index} className="cases-slider-item">
+              {activeCard === index ? (
+                <div className="cases-content-back">
+                  <div className="back-text">{card.backContent}</div>
+                  <button onClick={() => handleClick(index)}>Скрыть</button>
+                </div>
+              ) : (
+                <div className="cases-content-front">
+                  <p>{card.title}</p>
+                  <h3>{card.description}</h3>
+                  <img src={card.image} alt="" />
+                  <button onClick={() => handleClick(index)}>Подробнее</button>
+                </div>
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
