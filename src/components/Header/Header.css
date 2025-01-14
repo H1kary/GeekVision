@@ -46,3 +46,9 @@ header>nav>a:last-of-type {
     top: 25px;
     right: 45px;
 }
+
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+}
