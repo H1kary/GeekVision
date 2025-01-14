@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function FormPopup({ onClose }) {
   const [isClosing, setIsClosing] = useState(false);
@@ -152,7 +153,7 @@ function FormPopup({ onClose }) {
                 onChange={(e) => setIsAgreed(e.target.checked)}
               />
               <label htmlFor="agreement">
-                Я согласен на обработку персональных данных
+                Я согласен на <Link to="/privacy">обработку персональных данных</Link>
               </label>
             </div>
             <button type="submit" disabled={!isAgreed}>

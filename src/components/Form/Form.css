@@ -92,3 +92,14 @@ form button img {
 input:invalid {
     border: 1px solid red;
 }
+
+.checkbox-container label a,
+.checkbox-container label Link {
+    color: #232323;
+    text-decoration: underline;
+}
+
+.checkbox-container label a:hover,
+.checkbox-container label Link:hover {
+    color: #000;
+}

@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
+import { Link } from 'react-router-dom';
 
 
 function Form() {
@@ -155,7 +156,7 @@ function Form() {
                 onChange={(e) => setIsAgreed(e.target.checked)}
               />
               <label htmlFor="agreement">
-                Я согласен на обработку персональных данных
+                Я согласен на <Link to="/privacy">обработку персональных данных</Link>
               </label>
             </div>
             <button type="submit" disabled={!isAgreed}>
