@@ -94,7 +94,7 @@ function Form() {
 
   return (
     <section className="form" id="form">
-      
+
       <div className="form-container">
         <div className="form-container-inner">
           <h2>Остались вопросы?</h2>

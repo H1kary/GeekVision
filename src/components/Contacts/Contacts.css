@@ -21,6 +21,7 @@
     font-weight: 400;
     color: #676767;
     margin-top: 20px;
+    max-width: 290px;
 }
 
 .contacts-container-right {
@@ -60,4 +61,64 @@
     bottom: 0;
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .contacts {
+        margin-top: 60px;
+    }
+
+    .contacts-container {
+        max-width: 330px;
+        flex-direction: column;
+    }
+
+    .contacts-container-left h2 {
+        color: #232323;
+        font-family: "Inter Tight";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .contacts-container-left p {
+        color: #676767;
+        font-family: "Inter Tight";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .contacts-container-right {
+        margin-top: 20px;
+        min-width: 330px;
+        max-width: 330px;
+        min-height: 145px;
+        max-height: 145px;
+    }
+
+    .contacts-container-right p {
+        left: 25px;
+        top: 25px;
+        color: rgba(255, 255, 255, 0.70);
+        font-family: "Inter Tight";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        max-width: fit-content;
+    }
+
+    .contacts-container-right a {
+        color: #FFF;
+        font-family: "Inter Tight";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        left: 25px;
+        top: 59px;
+    }
 }

@@ -57,7 +57,7 @@ form input {
     width: 100%;
 }
 
-form input::placeholder{
+form input::placeholder {
     color: #B5B5B5;
 }
 
@@ -91,4 +91,78 @@ form button img {
 
 input:invalid {
     border: 1px solid red;
+}
+
+@media (max-width: 1024px) {
+    .form {
+        margin-top: 60px;
+    }
+
+    .form-container {
+        max-width: 372px;
+    }
+
+    .form-container-inner {
+        min-width: 322px;
+        max-width: 322px;
+        min-height: 558px;
+        max-height: 558px;
+    }
+
+    form>div {
+        flex-direction: column;
+    }
+
+    form input {
+        width: 322px;
+        height: 55px;
+        color: #B5B5B5;
+        font-family: "Inter Tight";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    form>input {
+        height: 100px;
+    }
+
+    .form-container-inner h2 {
+        color: #373737;
+        text-align: center;
+        font-family: Onest;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .form-container-inner p {
+        width: 264px;
+        color: #676767;
+        font-family: "Inter Tight";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+    }
+
+    .checkbox-container {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    form button {
+        height: 55px;
+        color: #FFF;
+        font-family: "Inter Tight";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
 }

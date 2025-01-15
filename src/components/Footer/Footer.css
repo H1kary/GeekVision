@@ -56,3 +56,58 @@ footer {
     display: block;
     max-width: fit-content;
 }
+
+@media (max-width: 1024px) {
+    footer {
+        height: 251px;
+        margin-top: 60px;
+    }
+
+    .footer-container {
+        max-width: 340px;
+    }
+
+    .footer-left>div:first-of-type {
+        display: none;
+    }
+
+    .footer-left>div:last-of-type {
+        gap: 10px;
+    }
+
+    .footer-left>div:last-of-type h3 {
+        color: #FFF;
+        font-family: "Inter Tight";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .footer-left>div:last-of-type a {
+        color: rgba(255, 255, 255, 0.90);
+        font-family: "Inter Tight";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .footer-right p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: "Inter Tight";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .footer-right a {
+        color: #FFF;
+        font-family: "Inter Tight";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}

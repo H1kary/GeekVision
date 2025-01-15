@@ -79,6 +79,7 @@ main>a:hover img {
 
 @media (max-width: 1024px) {
     main {
+        margin-top: 30px;
         max-width: 370px;
     }
 

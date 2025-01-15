@@ -116,6 +116,7 @@
 
 @media (max-width: 1024px) {
     .about-us {
+        margin-top: 39px;
         height: 517px;
     }
 
@@ -202,6 +203,7 @@
         font-weight: 400;
         line-height: normal;
     }
+
     .about-us-bg {
         position: absolute;
         top: 280px;

@@ -13,17 +13,17 @@ function Contacts() {
       delay: 0,
       opacity: 0,
       mobile: true,
-  });
-  sr.reveal('.contacts-container-left h2', {
-    origin: 'left',
-  });
-  sr.reveal('.contacts-container-left p', {
-    origin: 'left',
-    delay: 100,
-  });
-  sr.reveal('.contacts-container-right', {
-    origin: 'right',
-  });
+    });
+    sr.reveal('.contacts-container-left h2', {
+      origin: 'left',
+    });
+    sr.reveal('.contacts-container-left p', {
+      origin: 'left',
+      delay: 100,
+    });
+    sr.reveal('.contacts-container-right', {
+      origin: 'right',
+    });
   }, []);
 
   return (
@@ -31,7 +31,7 @@ function Contacts() {
       <div className="contacts-container">
         <div className="contacts-container-left">
           <h2>Контакты</h2>
-          <p>По любым вопросам можете <br />связаться с нами</p>
+          <p>По любым вопросам можете связаться с нами</p>
         </div>
         <div className="contacts-container-right">
           <p>Электронная почта</p>

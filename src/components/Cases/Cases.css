@@ -89,9 +89,9 @@
     min-height: 615px;
     max-height: 615px;
     transition: opacity 0.3s ease-in-out;
-  }
+}
 
-.cases-content-back button{
+.cases-content-back button {
     position: absolute;
     bottom: 25px;
     left: 50%;
@@ -105,9 +105,9 @@
     border: none;
     outline: none;
     cursor: pointer;
-  }  
+}
 
-.back-text{
+.back-text {
     max-width: 370px;
     position: absolute;
     top: 25px;
@@ -115,9 +115,81 @@
     padding: 10px;
     font-size: 12px;
     font-weight: 400;
-    
+
 }
 
+@media (max-width: 1024px) {
+    .cases {
+        margin-top: 60px;
+    }
 
+    .cases-container {
+        max-width: 328px;
+    }
+    .cases-container h2 {
+        color: #232323;
+        font-family: "Inter Tight";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
 
+    .cases-slider-item {
+        min-width: 328px;
+        max-width: 328px;
+        min-height: 369px;
+        max-height: 369px;
+    }
 
+    .cases-slider-item p {
+        display: none;
+    }
+
+    .cases-slider-item h3 {
+        left: 25px;
+        top: 25px;
+        max-width: 278px;
+        color: #232323;
+        font-family: "Inter Tight";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .cases-slider-item img {
+        top: 98px;
+        width: 278px;
+        height: 186px;
+    }
+
+    .cases-slider-item button {
+        left: 45px;
+        bottom: 25px;
+        color: #F9F7F7;
+        font-family: "Inter Tight";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+/* Стили для пагинации */
+.swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: rgba(35, 35, 35, 0.3);
+    opacity: 1;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #232323;
+}

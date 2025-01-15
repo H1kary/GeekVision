@@ -42,3 +42,40 @@
         transform: translateX(-100%);
     }
 }
+
+@media (max-width: 1024px) {
+    .partners {
+        margin-top: 60px;
+    }
+
+    .partners-content {
+        gap: 40px;
+    }
+
+    .partners-content>a:first-of-type img {
+        width: 305px;
+        height: 40px;
+    }
+
+    .partners-content>a:nth-of-type(2) img {
+        width: 190px;
+        height: 40px;
+    }
+
+    .partners-content>a:last-of-type img {
+        width: 385px;
+        height: 40px;
+    }
+
+    .partners-content {
+        padding: 0 40px;
+    }
+
+    .partners-track {
+        max-width: 370px;
+    }
+
+    .partners-content {
+        animation: scroll 10s linear infinite;
+    }
+}

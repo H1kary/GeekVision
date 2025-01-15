@@ -3,14 +3,25 @@ import cases1 from '../../assets/images/cases1.png';
 import cases2 from '../../assets/images/cases2.png';
 import cases3 from '../../assets/images/cases3.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, Navigation } from 'swiper/modules';
+import { Mousewheel, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
 import ScrollReveal from 'scrollreveal';
 
 function Cases() {
   const [activeCard, setActiveCard] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleClick = (index) => {
     setActiveCard(activeCard === index ? null : index);
@@ -70,11 +81,15 @@ function Cases() {
       <div className="cases-container">
         <h2>Кейсы</h2>
         <Swiper
-          modules={[Navigation, Mousewheel]}
+          modules={[Navigation, Mousewheel, Pagination]}
           spaceBetween={25}
-          slidesPerView={3}
+          slidesPerView={isMobile ? 1 : 3}
           mousewheel={true}
           loop={true}
+          pagination={isMobile ? {
+            clickable: true,
+            dynamicBullets: true
+          } : false}
           className="cases-swiper"
         >
           {cardContent.map((card, index) => (
