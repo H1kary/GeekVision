@@ -16,6 +16,10 @@
     margin-bottom: 59px;
 }
 
+.advantages-swiper {
+    width: 100%;
+}
+
 .advantages-slider-item {
     position: relative;
     overflow: hidden;
@@ -104,4 +108,69 @@
 
 .advantages-slider-item:hover img {
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .advantages {
+        margin-top: 134px;
+    }
+
+    .advantages-container {
+        max-width: 330px;
+    }
+
+    .advantages-container h2 {
+        color: #232323;
+        font-family: "Inter Tight";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    .advantages-swiper {
+        height: 500px !important;
+    }
+
+    .advantages-slider-item {
+        min-height: 197px;
+        max-height: 197px;
+        min-width: 330px;
+        max-width: 330px;
+        margin-bottom: 20px;
+    }
+
+    .advantages-slider-item p:first-of-type {
+        left: 25px;
+        top: 25px;
+        color: #232323;
+        text-align: center;
+        font-family: Onest;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .advantages-slider-item h3 {
+        left: 25px;
+        top: 65px;
+        color: #373737;
+        font-family: "Inter Tight";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .advantages-slider-item p:last-of-type {
+        left: 25px;
+        top: 104px;
+        color: rgba(55, 55, 55, 0.70);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }

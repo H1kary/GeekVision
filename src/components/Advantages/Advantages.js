@@ -4,10 +4,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ScrollReveal from 'scrollreveal';
 
 function Advantages() {
+  const [isVertical, setIsVertical] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsVertical(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     const sr = ScrollReveal({
       origin: 'bottom',
@@ -15,7 +26,7 @@ function Advantages() {
       duration: 1500,
       delay: 0,
       opacity: 0,
-      mobile: true,
+      mobile: false,
       reset: true
     });
 
@@ -28,6 +39,7 @@ function Advantages() {
     sr.reveal('.advantages-slider-item', {
       interval: 200,
       scale: 0.9,
+      mobile: false,
     });
   }, []);
 
@@ -38,11 +50,12 @@ function Advantages() {
         <Swiper
           modules={[Navigation, Mousewheel]}
           spaceBetween={30}
-          slidesPerView={4}
+          slidesPerView={isVertical ? 1 : 4}
+          direction={isVertical ? 'vertical' : 'horizontal'}
           mousewheel={true}
-          
           loop={true}
           className="advantages-swiper"
+          style={isVertical ? { height: '500px' } : {}}
         >
           <SwiperSlide className="advantages-slider-item">
             <p>01</p>
