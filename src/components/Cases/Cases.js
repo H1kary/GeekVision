@@ -93,20 +93,19 @@ function Cases() {
           className="cases-swiper"
         >
           {cardContent.map((card, index) => (
-            <SwiperSlide key={index} className="cases-slider-item">
-              {activeCard === index ? (
-                <div className="cases-content-back">
-                  <div className="back-text">{card.backContent}</div>
-                  <button onClick={() => handleClick(index)}>Скрыть</button>
-                </div>
-              ) : (
-                <div className="cases-content-front">
-                  <p>{card.title}</p>
-                  <h3>{card.description}</h3>
-                  <img src={card.image} alt="" />
-                  <button onClick={() => handleClick(index)}>Подробнее</button>
-                </div>
-              )}
+            <SwiperSlide 
+              key={index} 
+              className="cases-slider-item"
+              onClick={() => handleClick(index)}
+            >
+              <div className={`cases-content-front ${activeCard === index ? 'active' : ''}`}>
+                <p>{card.title}</p>
+                <h3>{card.description}</h3>
+                <img src={card.image} alt="" />
+              </div>
+              <div className={`cases-content-back ${activeCard === index ? 'active' : ''}`}>
+                <div className="back-text">{card.backContent}</div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
