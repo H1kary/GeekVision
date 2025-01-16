@@ -169,6 +169,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        text-align: left;
+        margin-left: 10px;
     }
 
     .about-us-head>div:last-of-type h2 span {
@@ -187,6 +189,8 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: left;
+        margin-left: 10px;
     }
 
     .about-us-container {

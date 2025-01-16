@@ -16,8 +16,6 @@
 .form-container-inner {
     min-width: 822px;
     max-width: 822px;
-    min-height: 599px;
-    max-height: 599px;
 }
 
 .form-container-inner h2 {
@@ -105,8 +103,6 @@ input:invalid {
     .form-container-inner {
         min-width: 322px;
         max-width: 322px;
-        min-height: 558px;
-        max-height: 558px;
     }
 
     form>div {

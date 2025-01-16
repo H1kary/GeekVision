@@ -1,96 +1,96 @@
 .form {
-    margin-top: 230px;
+  margin-top: 230px;
 }
 
 .form-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    height: 810px;
-    background-color: #fff;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 810px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-container-inner {
-    min-width: 822px;
-    max-width: 822px;
-    min-height: 599px;
-    max-height: 599px;
+  min-width: 822px;
+  max-width: 822px;
+  /* min-height: 599px;
+    max-height: 599px; */
 }
 
 .form-container-inner h2 {
-    font-size: 64px;
-    font-weight: 600;
-    color: #373737;
+  font-size: 64px;
+  font-weight: 600;
+  color: #373737;
 }
 
 .form-container-inner p {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 400;
-    color: #676767;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #676767;
 }
 
 form {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 form>div {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 form input {
-    height: 60px;
-    border-radius: 10px;
-    background-color: #F3F3F3;
-    color: #505050;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 0 30px;
-    border: none;
-    width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #F3F3F3;
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 30px;
+  border: none;
+  width: 100%;
 }
 
-form input::placeholder{
+form input::placeholder {
   color: #B5B5B5;
 }
 
 form input:focus {
-    outline: none;
+  outline: none;
 }
 
 form>input {
-    height: 99px;
+  height: 99px;
 }
 
 form button {
-    position: relative;
-    height: 80px;
-    background-color: #232323;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
+  position: relative;
+  height: 80px;
+  background-color: #232323;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 form button img {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 input:invalid {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .form-popup-overlay {
@@ -142,6 +142,7 @@ input:invalid {
     transform: scale(0.8);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -175,27 +176,27 @@ input:invalid {
 }
 
 .checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: nowrap;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .checkbox-container input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    padding: 0;
-    flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .checkbox-container label {
-    font-size: 14px;
-    color: #232323;
-    cursor: pointer;
-    white-space: normal;
+  font-size: 14px;
+  color: #232323;
+  cursor: pointer;
+  white-space: normal;
 }
 
 button[type="submit"]:disabled {
@@ -209,84 +210,84 @@ button[type="submit"]:disabled img {
 
 @media (max-width: 1024px) {
   .form {
-      margin-top: 60px;
+    margin-top: 60px;
   }
 
   .form-container {
-      max-width: 372px;
+    max-width: 372px;
   }
 
   .form-container-inner {
-      min-width: 322px;
-      max-width: 322px;
-      min-height: 558px;
-      max-height: 558px;
+    min-width: 322px;
+    max-width: 322px;
+    /* min-height: 558px;
+      max-height: 558px; */
   }
 
   form>div {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   form input {
-      width: 322px;
-      height: 55px;
-      color: #B5B5B5;
-      font-family: "Inter Tight";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+    width: 322px;
+    height: 55px;
+    color: #B5B5B5;
+    font-family: "Inter Tight";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 
   form>input {
-      height: 100px;
+    height: 100px;
   }
 
   .form-container-inner h2 {
-      color: #373737;
-      text-align: center;
-      font-family: Onest;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
+    color: #373737;
+    text-align: center;
+    font-family: Onest;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 
   .form-container-inner p {
-      width: 264px;
-      color: #676767;
-      font-family: "Inter Tight";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      margin-top: 10px;
+    width: 264px;
+    color: #676767;
+    font-family: "Inter Tight";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
   }
 
   .checkbox-container {
-      align-self: flex-start;
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
   }
 
   form button {
-      height: 55px;
-      color: #FFF;
-      font-family: "Inter Tight";
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
+    height: 55px;
+    color: #FFF;
+    font-family: "Inter Tight";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 }
 
 .form-popup.open {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 body.form-open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -314,7 +315,7 @@ body.form-open {
     font-size: 16px !important;
   }
 
-  .form-popup form > div {
+  .form-popup form>div {
     flex-direction: column;
   }
 

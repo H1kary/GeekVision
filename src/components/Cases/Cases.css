@@ -41,7 +41,7 @@
     transform: none;
 }
 
-.cases-slider-item:hover .cases-image-wrapper img{
+.cases-slider-item:hover .cases-image-wrapper img {
     transform: scale(1.05);
 }
 
@@ -205,13 +205,13 @@
 /* Стили для пагинации */
 .swiper-pagination {
     position: relative !important;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
-    background: rgba(35, 35, 35, 0.3);
+    background: #232323 !important;
     opacity: 1;
     margin: 0 5px;
 }

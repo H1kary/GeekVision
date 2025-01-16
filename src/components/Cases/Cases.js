@@ -23,6 +23,10 @@ function Cases() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // const handleClick = (index) => {
+  //   setActiveCard(activeCard === index ? null : index);
+  // };
+
   const cardContent = [
     {
       title: "ПРОМЫШЛЕННОСТЬ",
@@ -93,6 +97,7 @@ function Cases() {
             <SwiperSlide
               key={index}
               className="cases-slider-item"
+              // onClick={() => handleClick(index)}
               onMouseEnter={() => setActiveCard(index)}
               onMouseLeave={() => setActiveCard(null)}
             >
