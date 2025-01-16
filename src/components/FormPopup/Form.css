@@ -52,7 +52,7 @@ form input {
     color: #505050;
     font-size: 16px;
     font-weight: 500;
-    padding-left: 30px;
+    padding: 0 30px;
     border: none;
     width: 100%;
 }
@@ -102,8 +102,10 @@ input:invalid {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .form-popup {
@@ -114,6 +116,9 @@ input:invalid {
   max-width: 95%;
   width: 900px;
   animation: popup 0.3s ease-out;
+  margin: 20px auto;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .form-popup .form-container-inner {
@@ -170,22 +175,27 @@ input:invalid {
 }
 
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .checkbox-container input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
 }
 
 .checkbox-container label {
-  font-size: 14px;
-  color: #232323;
-  cursor: pointer;
+    font-size: 14px;
+    color: #232323;
+    cursor: pointer;
+    white-space: normal;
 }
 
 button[type="submit"]:disabled {
@@ -268,5 +278,65 @@ button[type="submit"]:disabled img {
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+  }
+}
+
+.form-popup.open {
+    overflow-y: auto;
+}
+
+body.form-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .form-popup {
+    padding: 30px;
+    margin: 10px;
+    max-height: 85vh;
+  }
+
+  .form-popup-overlay {
+    padding: 10px;
+  }
+
+  .form-container-inner {
+    min-width: auto !important;
+    padding: 0 !important;
+  }
+
+  .form-popup h2 {
+    font-size: 32px !important;
+    margin-bottom: 15px;
+  }
+
+  .form-popup p {
+    font-size: 16px !important;
+  }
+
+  .form-popup form > div {
+    flex-direction: column;
+  }
+
+  .form-popup form input {
+    width: 100% !important;
+  }
+
+  .checkbox-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .checkbox-container input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+  }
+
+  .checkbox-container label {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
   }
 }
