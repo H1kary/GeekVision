@@ -56,9 +56,10 @@ function Advantages() {
           loop={isVertical ? 'false' : 'true'}
           className="advantages-swiper"
           style={isVertical ? { height: '500px' } : {}}
-          allowTouchMove={!isVertical}
-          noSwiping={isVertical}
+          allowTouchMove={false}
+          noSwiping={true}
           noSwipingClass="swiper-slide"
+          preventInteractionOnTransition={true}
         >
           <SwiperSlide className="advantages-slider-item">
             <p>01</p>
