@@ -159,6 +159,7 @@
         width: 166px;
         height: 93px;
         border-radius: 25px;
+        z-index: 10;
     }
 
     .about-us-head>div:last-of-type h2 {

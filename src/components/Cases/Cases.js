@@ -23,22 +23,18 @@ function Cases() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleClick = (index) => {
-    setActiveCard(activeCard === index ? null : index);
-  };
-
   const cardContent = [
-    {
-      title: "ПРОМЫШЛЕННОСТЬ",
-      description: "Анализ загруженности и фиксация реальных трудозатрат.",
-      image: cases1,
-      backContent: "Здесь подробное описание первого кейса. Можно добавить любой текст или контент."
-    },
     {
       title: "ПРОМЫШЛЕННОСТЬ",
       description: "Дефектоскопия на объектах с высоким темпом производства.",
       image: cases2,
       backContent: "Здесь подробное описание второго кейса. Можно добавить любой текст или контент."
+    },
+    {
+      title: "ПРОМЫШЛЕННОСТЬ",
+      description: "Анализ загруженности и фиксация реальных трудозатрат.",
+      image: cases1,
+      backContent: "Здесь подробное описание первого кейса. Можно добавить любой текст или контент."
     },
     {
       title: "ПРОМЫШЛЕННОСТЬ",
@@ -91,17 +87,21 @@ function Cases() {
             dynamicBullets: true
           } : false}
           className="cases-swiper"
+
         >
           {cardContent.map((card, index) => (
-            <SwiperSlide 
-              key={index} 
+            <SwiperSlide
+              key={index}
               className="cases-slider-item"
-              onClick={() => handleClick(index)}
+              onMouseEnter={() => setActiveCard(index)}
+              onMouseLeave={() => setActiveCard(null)}
             >
               <div className={`cases-content-front ${activeCard === index ? 'active' : ''}`}>
                 <p>{card.title}</p>
                 <h3>{card.description}</h3>
-                <img src={card.image} alt="" />
+                <div className="cases-image-wrapper">
+                  <img src={card.image} alt="" />
+                </div>
               </div>
               <div className={`cases-content-back ${activeCard === index ? 'active' : ''}`}>
                 <div className="back-text">{card.backContent}</div>

@@ -50,16 +50,11 @@ function Advantages() {
         <Swiper
           modules={[Navigation, Mousewheel]}
           spaceBetween={30}
-          slidesPerView={isVertical ? 1 : 4}
+          slidesPerView={isVertical ? 5 : 4}
           direction={isVertical ? 'vertical' : 'horizontal'}
-          mousewheel={isVertical ? 'false' : 'true'}
+          mousewheel={'true'}
           loop={isVertical ? 'false' : 'true'}
           className="advantages-swiper"
-          style={isVertical ? { height: '500px' } : {}}
-          allowTouchMove={false}
-          noSwiping={true}
-          noSwipingClass="swiper-slide"
-          preventInteractionOnTransition={true}
         >
           <SwiperSlide className="advantages-slider-item">
             <p>01</p>
