@@ -85,7 +85,7 @@ function Form() {
       duration: 1500,
       delay: 0,
       opacity: 0,
-      mobile: true,
+      mobile: false,
     });
     sr.reveal('.form-container', {
       origin: 'bottom',

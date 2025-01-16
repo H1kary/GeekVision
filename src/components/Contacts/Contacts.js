@@ -12,7 +12,7 @@ function Contacts() {
       duration: 1500,
       delay: 0,
       opacity: 0,
-      mobile: true,
+      mobile: false,
     });
     sr.reveal('.contacts-container-left h2', {
       origin: 'left',

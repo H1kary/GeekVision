@@ -20,7 +20,7 @@ function CallUs() {
       duration: 1500,
       delay: 0,
       opacity: 0,
-      mobile: true,
+      mobile: false,
   });
   sr.reveal('.call-us-container', {
     origin: 'bottom',

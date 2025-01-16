@@ -10,7 +10,7 @@ function Header() {
             duration: 1500,
             delay: 200,
             reset: true,
-            mobile: true,
+            mobile: false,
         });
         sr.reveal('#header', {
             origin: 'top',
@@ -18,7 +18,7 @@ function Header() {
             duration: 1500,
             delay: 200,
             reset: true,
-            mobile: true,
+            mobile: false,
         });
     }, []);
     return (

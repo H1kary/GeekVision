@@ -23,8 +23,8 @@ function AboutUs() {
       duration: 1500,
       delay: 0,
       opacity: 0,
-      mobile: true,
-  });
+      mobile: false,
+    });
 
     sr.reveal('.about-us-head div:first-of-type h1', { 
         origin: 'left',

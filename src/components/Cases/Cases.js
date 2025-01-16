@@ -61,7 +61,7 @@ function Cases() {
       duration: 1500,
       delay: 0,
       opacity: 0,
-      mobile: true,
+      mobile: false,
       reset: true
     });
 
