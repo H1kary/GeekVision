@@ -52,8 +52,8 @@ function Advantages() {
           spaceBetween={30}
           slidesPerView={isVertical ? 1 : 4}
           direction={isVertical ? 'vertical' : 'horizontal'}
-          mousewheel={true}
-          loop={true}
+          mousewheel={isVertical ? 'false' : 'true'}
+          loop={isVertical ? 'false' : 'true'}
           className="advantages-swiper"
           style={isVertical ? { height: '500px' } : {}}
         >

@@ -214,4 +214,7 @@
         object-fit: cover;
         object-position: center;
     }
+    .whitefade{
+        display: none;
+    }
 }
