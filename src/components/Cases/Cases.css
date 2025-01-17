@@ -170,8 +170,8 @@
     .cases-slider-item {
         min-width: 328px;
         max-width: 328px;
-        min-height: 426px;
-        max-height: 426px;
+        min-height: 451px;
+        max-height: 451px;
         border-radius: 20px;
     }
 
@@ -200,7 +200,7 @@
     }
 
     .cases-image-wrapper {
-        top: 135px;
+        top: 160px;
         width: 278px;
         height: 266px;
     }

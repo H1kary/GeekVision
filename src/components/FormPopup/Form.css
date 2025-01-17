@@ -215,6 +215,7 @@ button[type="submit"]:disabled img {
 
   .form-container {
     max-width: 372px;
+    max-width: 472px;
   }
 
   .form-container-inner {

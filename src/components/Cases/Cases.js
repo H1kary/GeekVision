@@ -25,9 +25,9 @@ function Cases() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // const handleClick = (index) => {
-  //   setActiveCard(activeCard === index ? null : index);
-  // };
+  const handleClick = (index) => {
+    setActiveCard(activeCard === index ? null : index);
+  };
 
   const cardContent = [
     {
@@ -130,9 +130,9 @@ function Cases() {
             <SwiperSlide
               key={index}
               className="cases-slider-item"
-              // onClick={() => handleClick(index)}
-              onMouseEnter={() => setActiveCard(index)}
-              onMouseLeave={() => setActiveCard(null)}
+              onClick={() => handleClick(index)}
+              // onMouseEnter={() => setActiveCard(index)}
+              // onMouseLeave={() => setActiveCard(null)}
             >
               <div className={`cases-content-front ${activeCard === index ? 'active' : ''}`}>
                 <p>{card.title}</p>
