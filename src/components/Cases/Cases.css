@@ -81,7 +81,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 370px;
-    height: 369px;
+    height: 426px;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -128,11 +128,26 @@
 
 .back-text {
     max-width: 370px;
-    font-size: 16px;
-    line-height: 1.5;
     color: #ffffff;
 }
 
+.back-text h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.back-text p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: static;
+    border: none;
+    padding: 0;
+    max-width: 100%;
+}
 
 @media (max-width: 1024px) {
     .cases {
