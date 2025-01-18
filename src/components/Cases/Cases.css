@@ -180,13 +180,17 @@
     height: 1000px;
     position: absolute;
     z-index: -999;
-    right: -290px;
+    right: -220px;
     bottom: -350px;
     user-select: none;
     -webkit-user-drag: none;
 }
 
 @media (max-width: 1024px) {
+    .cases-content-back img{
+        bottom: -250px;
+        right: -200px;
+    }
     .cases {
         margin-top: 60px;
     }
