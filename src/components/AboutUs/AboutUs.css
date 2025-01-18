@@ -154,7 +154,7 @@
     }
 
     .about-us-head>div:last-of-type {
-        align-self: flex-end;
+        align-self: flex-start;
         margin-top: 30px;
         width: 166px;
         height: 93px;

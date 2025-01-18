@@ -112,7 +112,7 @@ input:invalid {
     form input {
         width: 322px;
         height: 55px;
-        color: #B5B5B5;
+        color: #505050;
         font-family: "Inter Tight";
         font-size: 12px;
         font-style: normal;
@@ -122,6 +122,10 @@ input:invalid {
 
     form>input {
         height: 100px;
+    }
+
+    form input::placeholder {
+        color: #B5B5B5;
     }
 
     .form-container-inner h2 {

@@ -38,17 +38,17 @@ function Form() {
     // Проверка на пустые поля
     if (!company || !name || !task || !email || !phone) {
       toast.error('Пожалуйста, заполните все поля!');
-      return; // Прерываем выполнение функции, если есть пустые поля
+      return; 
     }
 
     // Валидация номера телефона
     const phoneRegex = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
     if (!phoneRegex.test(phone)) {
       toast.error('Пожалуйста, введите корректный номер телефона в формате: +7 (905) 318-40-81');
-      return; // Прерываем выполнение функции, если номер телефона некорректен
+      return; 
     }
 
-    // Создаем объект с данными для отправки
+    
     const templateParams = {
       from_name: name,
       to_name: 'GeekVision',
@@ -64,7 +64,6 @@ function Form() {
         (result) => {
           console.log('Письмо успешно отправлено:', result.text);
           toast.success('Данные успешно отправлены!');
-          // Очищаем форму после отправки
           setCompany('');
           setName('');
           setTask('');
@@ -110,7 +109,7 @@ function Form() {
                 type="text"
                 placeholder="Название компании"
                 value={company}
-                onChange={(e) => setCompany(e.target.value)} // Обновляем состояние
+                onChange={(e) => setCompany(e.target.value)} 
               />
               <input
                 id="input-name"
@@ -118,7 +117,7 @@ function Form() {
                 type="text"
                 placeholder="Имя"
                 value={name}
-                onChange={(e) => setName(e.target.value)} // Обновляем состояние
+                onChange={(e) => setName(e.target.value)} 
               />
             </div>
             <input
@@ -127,7 +126,7 @@ function Form() {
               type="text"
               placeholder="Опишите задачу"
               value={task}
-              onChange={(e) => setTask(e.target.value)} // Обновляем состояние
+              onChange={(e) => setTask(e.target.value)} 
             />
             <div>
               <input
@@ -136,7 +135,7 @@ function Form() {
                 type="email"
                 placeholder="E-mail"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} // Обновляем состояние
+                onChange={(e) => setEmail(e.target.value)} 
               />
               <input
                 id="input-phone"
@@ -144,7 +143,7 @@ function Form() {
                 type="tel"
                 placeholder="Номер телефона"
                 value={phone}
-                onInput={handlePhoneInput} // Используем onInput для автоформатирования
+                onInput={handlePhoneInput} 
               />
             </div>
             <div className="checkbox-container">

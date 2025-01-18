@@ -232,7 +232,7 @@ button[type="submit"]:disabled img {
   form input {
     width: 322px;
     height: 55px;
-    color: #B5B5B5;
+    color: #505005;
     font-family: "Inter Tight";
     font-size: 12px;
     font-style: normal;
@@ -242,6 +242,10 @@ button[type="submit"]:disabled img {
 
   form>input {
     height: 100px;
+  }
+
+  form input::placeholder {
+    color: #B5B5B5;
   }
 
   .form-container-inner h2 {

@@ -53,7 +53,7 @@ function FormPopup({ onClose }) {
       return;
     }
 
-    // Создаем объект с данными для отправки
+    
     const templateParams = {
       from_name: name,
       to_name: 'GeekVision',
@@ -78,7 +78,7 @@ function FormPopup({ onClose }) {
         }
       );
 
-    // Очищаем форму после отправки
+    
     setCompany('');
     setName('');
     setTask('');
