@@ -119,11 +119,15 @@
     transform: translateX(100%);
     padding: 25px;
     background-color: #232323;
+    position: relative;
 }
 
 .cases-content-back.active {
     opacity: 1;
     transform: translateX(0);
+    width: 420px;
+    height: 615px;
+    
 }
 
 .back-text {
@@ -152,8 +156,8 @@
 .cases-content-back img{
     position: absolute;
     z-index: 1;
-    left: 0;
     right: 0;
+    bottom: 0;
     user-select: none;
     -webkit-user-drag: none;
 }
