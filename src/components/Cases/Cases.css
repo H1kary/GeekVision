@@ -149,6 +149,15 @@
     max-width: 100%;
 }
 
+.cases-content-back img{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 @media (max-width: 1024px) {
     .cases {
         margin-top: 60px;

@@ -68,7 +68,7 @@
 
 .about-us-bg {
     position: absolute;
-    top: 280px;
+    top: 355px;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
@@ -211,8 +211,8 @@
 
     .about-us-bg {
         position: absolute;
-        top: 280px;
-        left: 50%;
+        top: 241px;
+        left: 262%;
         transform: translateX(-50%);
         width: 717px;
         height: 270px;

@@ -4,6 +4,7 @@ import cases2 from '../../assets/images/cases2.png';
 import cases3 from '../../assets/images/cases3.png';
 import cases4 from '../../assets/images/cases4.png';
 import cases5 from '../../assets/images/cases5.png';
+import Union from '../../assets/images/Union.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -155,6 +156,7 @@ function Cases() {
                   <h4>Результат</h4>
                   <p>{card.backContent.result}</p>
                 </div>
+                <img src={Union} alt="" />
               </div>
             </SwiperSlide>
           ))}
