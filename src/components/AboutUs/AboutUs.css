@@ -211,8 +211,7 @@
 
     .about-us-bg {
         position: absolute;
-        top: 241px;
-        left: 262%;
+        top: 259px;
         transform: translateX(-50%);
         width: 717px;
         height: 270px;
