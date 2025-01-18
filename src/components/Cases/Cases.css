@@ -146,6 +146,8 @@
 }
 
 .back-text h4 {
+    position: relative;
+    z-index: 10;
     color: #FFF;
     font-family: "Inter Tight";
     font-size: 13px;
@@ -157,6 +159,8 @@
 }
 
 .back-text p {
+    position: relative;
+    z-index: 10;
     color: #FFF;
     font-family: "Inter Tight";
     font-size: 12px;
@@ -172,10 +176,12 @@
 }
 
 .cases-content-back img{
+    width: 1000px;
+    height: 1000px;
     position: absolute;
     z-index: -999;
-    right: 0;
-    bottom: 0;
+    right: -290px;
+    bottom: -350px;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -341,6 +347,7 @@
 
 
 .cases-content-back {
+    overflow: hidden;
     position: relative;
 }
 
