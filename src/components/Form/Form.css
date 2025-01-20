@@ -152,6 +152,7 @@ input:invalid {
     .checkbox-container {
         align-self: flex-start;
         display: flex;
+        align-items: center;
         flex-direction: row;
         gap: 10px;
     }

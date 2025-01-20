@@ -54,7 +54,7 @@ function Main() {
                 <Header />
                 <h1>Geek Vision</h1>
                 <p>
-                    Обработка фото и видео изображений с помощью <br />технологий искусственного интеллекта.
+                Оптимизация бизнес-процессов с использованием <br />технологий искусственного интеллекта
                 </p>
                 <a href="/" onClick={handleOpenForm}>Обсудить проект <img className='main-button-img' src={mainbutton} alt="" /></a>
                 <img src={mainsvg} alt="main" />

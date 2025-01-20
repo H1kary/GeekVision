@@ -199,6 +199,12 @@ input:invalid {
   white-space: normal;
 }
 
+.checkbox-container label a {
+  color: #232323;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
 button[type="submit"]:disabled {
   background-color: #cccccc;
   cursor: not-allowed;

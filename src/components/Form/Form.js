@@ -59,7 +59,7 @@ function Form() {
     };
 
     emailjs
-      .send('service_gk3g9yp', 'template_ny80gvp', templateParams, '_XKJaj8pxeZ3ZGnOA')
+      .send('service_itsa1sz', 'template_eu5stpn', templateParams, 'f00jNmXGxI7vp2tyq')
       .then(
         (result) => {
           console.log('Письмо успешно отправлено:', result.text);
@@ -154,7 +154,7 @@ function Form() {
                 onChange={(e) => setIsAgreed(e.target.checked)}
               />
               <label htmlFor="agreement">
-                Я согласен на обработку персональных данных
+                Я согласен на обработку <a href="/" download>персональных данных</a>
               </label>
             </div>
             <button type="submit" disabled={!isAgreed}>
