@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState, useEffect } from 'react';
+import policyPDF from '../../assets/files/policy.pdf';
 
 function FormPopup({ onClose }) {
   const [isClosing, setIsClosing] = useState(false);
@@ -158,7 +159,7 @@ function FormPopup({ onClose }) {
                 onChange={(e) => setIsAgreed(e.target.checked)}
               />
               <label htmlFor="agreement">
-                Я согласен на обработку <a href="/" download>персональных данных</a>
+                Я согласен на обработку <a href={policyPDF} target="_blank" rel="noopener noreferrer">персональных данных</a>
               </label>
             </div>
             <button type="submit" disabled={!isAgreed}>

@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
+import policyPDF from '../../assets/files/policy.pdf';
 
 
 function Form() {
@@ -154,7 +155,7 @@ function Form() {
                 onChange={(e) => setIsAgreed(e.target.checked)}
               />
               <label htmlFor="agreement">
-                Я согласен на обработку <a href="/" download>персональных данных</a>
+                Я согласен на обработку <a href={policyPDF} target="_blank" rel="noopener noreferrer">персональных данных</a>
               </label>
             </div>
             <button type="submit" disabled={!isAgreed}>
