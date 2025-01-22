@@ -158,6 +158,7 @@
         min-width: 330px;
         max-width: 330px;
         margin-bottom: 20px;
+        padding-right: 25px;
     }
 
     .advantages-slider-item p:first-of-type {
@@ -176,6 +177,7 @@
     .advantages-slider-item h3 {
         left: 25px;
         top: 65px;
+        max-width: 280px;
         color: #373737;
         font-family: "Inter Tight";
         font-size: 20px;
@@ -186,7 +188,7 @@
 
     .advantages-slider-item-text{
         position: absolute;
-        top: 119px!important;
+        top: 128px!important;
     }
 
     .advantages-slider-item p:last-of-type {
