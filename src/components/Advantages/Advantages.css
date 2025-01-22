@@ -48,6 +48,7 @@
 }
 
 .advantages-slider-item p:first-of-type {
+    max-width: 255px;
     position: absolute;
     top: 40px;
     left: 20px;
@@ -61,6 +62,7 @@
 
 .advantages-slider-item h3 {
     position: absolute;
+    max-width: 255px;
     top: 120px;
     left: 20px;
     font-size: 29px;
@@ -72,6 +74,7 @@
 
 .advantages-slider-item p:last-of-type {
     position: absolute;
+    max-width: 255px;
     top: 292px;
     left: 20px;
     font-size: 18px;
@@ -131,6 +134,7 @@
     }
 
     .advantages-container h2 {
+        max-width: 280px;
         color: #232323;
         font-family: "Inter Tight";
         font-size: 36px;
@@ -157,6 +161,7 @@
     }
 
     .advantages-slider-item p:first-of-type {
+        max-width: 280px;
         left: 25px;
         top: 25px;
         color: #232323;
@@ -179,7 +184,13 @@
         line-height: normal;
     }
 
+    .advantages-slider-item-text{
+        position: absolute;
+        top: 119px!important;
+    }
+
     .advantages-slider-item p:last-of-type {
+        max-width: 280px;
         left: 25px;
         top: 104px;
         color: rgba(55, 55, 55, 0.70);

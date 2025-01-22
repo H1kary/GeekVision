@@ -70,8 +70,8 @@ function Advantages() {
           </SwiperSlide>
           <SwiperSlide className="advantages-slider-item">
             <p>03</p>
-            <h3>Интеграция в <br />бизнес процессы</h3>
-            <p>Мы помогаем интегрировать разработанное решение в ваш бизнес, производим настройку оборудования, проводим обучение сотрудников.</p>
+            <h3>Интеграция в бизнес процессы</h3>
+            <p className="advantages-slider-item-text">Мы помогаем интегрировать разработанное решение в ваш бизнес, производим настройку оборудования, проводим обучение сотрудников.</p>
             <img src={advatagesSvg} alt="" />
           </SwiperSlide>
           <SwiperSlide className="advantages-slider-item">
@@ -82,7 +82,7 @@ function Advantages() {
           </SwiperSlide>
           <SwiperSlide className="advantages-slider-item">
             <p>05</p>
-            <h3>Сильная <br />команда</h3>
+            <h3>Сильная команда</h3>
             <p>Наша команда состоит из сильных технических специалистов, за плечами которых опыт работы над самыми сложными проектами</p>
             <img src={advatagesSvg} alt="" />
           </SwiperSlide>
