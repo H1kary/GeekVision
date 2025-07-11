@@ -18,19 +18,42 @@ function Form() {
   const [isAgreed, setIsAgreed] = useState(false);
 
   const formatPhoneNumber = (value) => {
-    const cleaned = value.replace(/\D/g, '');
-    if (cleaned.length > 10) {
-      const match = cleaned.match(/^8(\d{3})(\d{3})(\d{2})(\d{2})$/);
-      if (match) {
-        return `+7 (${match[1]}) ${match[2]}-${match[3]}-${match[4]}`;
-      }
+    let cleaned = value.replace(/\D/g, '');
+
+    // Если начинается с 8, заменяем на 7
+    if (cleaned.startsWith('8')) {
+      cleaned = '7' + cleaned.slice(1);
     }
-    return value;
+    if (!cleaned.startsWith('7')) {
+      cleaned = '7' + cleaned;
+    }
+
+    let formatted = '+7';
+    if (cleaned.length > 1) {
+      formatted += ' (' + cleaned.slice(1, 4);
+    }
+    if (cleaned.length >= 4) {
+      formatted += ') ' + cleaned.slice(4, 7);
+    }
+    if (cleaned.length >= 7) {
+      formatted += '-' + cleaned.slice(7, 9);
+    }
+    if (cleaned.length >= 9) {
+      formatted += '-' + cleaned.slice(9, 11);
+    }
+
+    return formatted;
   };
 
   const handlePhoneInput = (e) => {
-    const formattedPhone = formatPhoneNumber(e.target.value);
-    setPhone(formattedPhone);
+    const input = e.target.value;
+    // Если пользователь удаляет символы, не форматируем
+    if (input.length < phone.length) {
+      setPhone(input);
+    } else {
+      const formattedPhone = formatPhoneNumber(input);
+      setPhone(formattedPhone);
+    }
   };
 
   const sendEmail = (e) => {
